@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
 header {
-    background-color: #7fda2b;
+    background-image: linear-gradient(to right, #2f83e4, #f836b7 );
     color: white;
     text-align: center;
     padding: 2rem;
@@ -32,6 +32,7 @@ header {
 #search-button {
     padding: 0.5rem 1rem;
     font-size: 16px;
+    font-family: monospace;
     cursor: pointer;
     background-color: #007bff;
     color: white;
@@ -51,7 +52,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     padding: 1rem;
-    background-image: linear-gradient(to right, #bcd81d, #1d98cc );
+   
 }
 
 .gif-box {
@@ -89,7 +90,7 @@ header {
 }
 
 .like-button:hover {
-    color: red;
+    color: rgb(221, 84, 84);
 }
 .share-button:hover {
     color: #007bff;
