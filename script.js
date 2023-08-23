@@ -24,6 +24,7 @@ function createShareButton(gifUrl) {
     shareButton.innerHTML = '<i class="fas fa-share"></i> Share';
 
     shareButton.addEventListener('click', () => {
+        console.log(gifUrl);
         window.open(gifUrl, '_blank');
     });
 
