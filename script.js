@@ -43,7 +43,7 @@ function displayGIFs(gifs) {
 
         const likeButton = createLikeButton();
 
-        const shareButton = createShareButton();
+        const shareButton = createShareButton(gif.images.fixed_height.url);
 
         gifBox.appendChild(gifImage);
         gifBox.appendChild(likeButton);
@@ -60,6 +60,21 @@ searchButton.addEventListener('click', async () => {
             displayGIFs(gifs);
         } catch (error) {
             console.error('Error fetching GIFs:', error);
+        }
+    }
+});
+
+searchInput.addEventListener('keypress', async (event) => {
+    if (event.keyCode === 13) { 
+        event.preventDefault(); 
+        const query = searchInput.value.trim();
+        if (query) {
+            try {
+                const gifs = await fetchGIFs(query);
+                displayGIFs(gifs);
+            } catch (error) {
+                console.error('Error fetching GIFs:', error);
+            }
         }
     }
 });
